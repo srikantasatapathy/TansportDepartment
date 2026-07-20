@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+:root {
+  --background: #eef2f7;
+  --foreground: #0f172a;
+  --gov-blue: #0b3d91;
+  --gov-saffron: #ff7722;
+  --gov-green: #138808;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+html,
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-noto), var(--font-geist-sans), "Segoe UI", system-ui, sans-serif;
+}
+
+/* Custom scrollbar for a cleaner console feel */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #e2e8f0; }
+::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: #64748b; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fadeIn { animation: fadeIn 0.35s ease both; }
+.animate-slideIn { animation: slideIn 0.28s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.animate-popIn { animation: popIn 0.25s ease both; }
+
+.gov-gradient {
+  background: linear-gradient(120deg, #0b3d91 0%, #1e5bb8 55%, #2563eb 100%);
+}
+.tricolor-bar {
+  background: linear-gradient(90deg, #ff7722 0 33.3%, #ffffff 33.3% 66.6%, #138808 66.6% 100%);
+}
+.card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06), 0 8px 24px -12px rgba(15, 23, 42, 0.12);
+}
