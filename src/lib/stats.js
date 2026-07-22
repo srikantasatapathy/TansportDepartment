@@ -12,6 +12,8 @@ export function applyFilters(list, f) {
     if (f.status && f.status !== "ALL" && c.status !== f.status) return false;
     if (f.vehicleType && f.vehicleType !== "ALL" && c.vehicleType !== f.vehicleType) return false;
     if (f.overdueOnly && !c.isOverdue) return false;
+    if (f.minAmount != null && c.amount < f.minAmount) return false;
+    if (f.maxAmount != null && c.amount > f.maxAmount) return false;
     if (from && new Date(c.issueDate) < from) return false;
     if (to && new Date(c.issueDate) > to) return false;
     if (q) {

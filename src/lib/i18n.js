@@ -95,6 +95,19 @@ export const STRINGS = {
   generatedOn: { en: "Generated on", hi: "तैयार किया गया" },
   quickStats: { en: "Quick Overview", hi: "त्वरित अवलोकन" },
   days: { en: "days", hi: "दिन" },
+
+  // Ask AI assistant (offline chatbot)
+  aiName: { en: "Saarthi AI", hi: "सारथी AI" },
+  aiRole: { en: "e-Challan Data Assistant", hi: "ई-चालान डेटा सहायक" },
+  aiGreeting: {
+    en: "Hi, I'm Saarthi — your challan data assistant. Ask me anything, e.g. “How many challans are pending in Patna?”",
+    hi: "नमस्ते, मैं सारथी हूँ — आपका चालान डेटा सहायक। कुछ भी पूछें, जैसे “पटना में कितने चालान बकाया हैं?”",
+  },
+  aiPlaceholder: { en: "Ask about challans, districts, dues…", hi: "चालान, जिले, बकाया के बारे में पूछें…" },
+  aiOffline: { en: "Answers computed on-device from live data", hi: "उत्तर डिवाइस पर ही लाइव डेटा से" },
+  aiSuggest: { en: "Try asking", hi: "यह पूछें" },
+  aiTyping: { en: "Saarthi is typing…", hi: "सारथी लिख रहे हैं…" },
+  aiClear: { en: "Clear chat", hi: "चैट साफ़ करें" },
 };
 
 export function translate(key, lang) {

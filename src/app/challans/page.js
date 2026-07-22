@@ -13,7 +13,7 @@ import { exportPdf, exportExcel } from "@/lib/export";
 import { buildChallanReport } from "@/lib/reportData";
 import { formatINRShort } from "@/lib/format";
 
-const INITIAL = { search: "", district: "ALL", violation: "ALL", status: "ALL", vehicleType: "ALL", fromDate: "", toDate: "", overdueOnly: false };
+const INITIAL = { search: "", district: "ALL", violation: "ALL", status: "ALL", vehicleType: "ALL", fromDate: "", toDate: "", overdueOnly: false, minAmount: null, maxAmount: null };
 
 export default function ChallansPage() {
   const { t, lang } = useApp();

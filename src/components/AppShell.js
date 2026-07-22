@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useApp } from "@/context/AppContext";
 import Sidebar from "./Sidebar";
 import Topbar from "./Topbar";
+import ChatBot from "./ChatBot";
 
 export default function AppShell({ title, children }) {
   const { officer, ready } = useApp();
@@ -31,6 +32,7 @@ export default function AppShell({ title, children }) {
         <Topbar onMenu={() => setMenuOpen(true)} title={title} />
         <main className="flex-1 overflow-y-auto p-4 sm:p-6">{children}</main>
       </div>
+      <ChatBot />
     </div>
   );
 }
